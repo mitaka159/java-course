@@ -1,1 +1,1 @@
-# java-course
+# java-course Dimitur Kirqkov
