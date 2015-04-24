@@ -1,0 +1,20 @@
+package lekciq2;
+import java.util.Scanner;
+
+public class P1 {
+
+	public static void main(String[] args) {
+     Scanner input= new Scanner(System.in,"UTF-8");	
+     
+     System.out.println("Enter the lengh of first wall");
+     double a=input.nextDouble();
+     
+     System.out.println("Enter the lengh of second wall");
+     double b=input.nextDouble();
+     
+     System.out.println("The area is:" +(b*a)); //Pri men ne se polzva tochka a zapetaq za double kogato pishem v konzolata!!!! :D 
+     
+     input.close();
+	}
+
+}
