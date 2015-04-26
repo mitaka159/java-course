@@ -24,7 +24,7 @@ public class P3 {
 		long citNum=input.nextLong();
 		
 		System.out.println("Enter Telephone:");
-		long phone=input.nextLong();
+		long phone=input.nextLong(); //moje da stane i s string !
 		
 		System.out.println("Person name is: " +name +" Family name is: " +familyName +" Years are:" +years +" Gender is: " +gender +" Citizen number is:" +citNum +" The phone is: " +phone);
 		input.close();
