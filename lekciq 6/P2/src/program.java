@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+
+public class program {
+
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in,"UTF-8");
+		
+		Car[] mass=new Car[10];
+		double price;
+		boolean mitko=true;
+		int h;
+		double fuel;
+		
+		for(int i=0;i<5;i++){
+			System.out.println("Enter fuel:");
+			fuel=input.nextDouble();
+			
+			
+			System.out.println("Enter price:");
+			price=input.nextDouble();
+			mass[i]=new Automobile(fuel);
+			mass[i].Car1(price);
+			System.out.println(((Automobile)mass[i]).fuel);
+			
+		}
+		for(int i=5;i<10;i++){
+			System.out.println("Enter prohodim or not :");
+			h=input.nextInt();
+			if(h==1)mitko=true;
+			if(h==0)mitko=false;
+			
+			
+			System.out.println("Enter price:");
+			price=input.nextDouble();
+			mass[i]=new Suv(mitko);
+			mass[i].Car1(price);
+		}
+		
+		double p=0;
+		for(int k=0;k<10;k++){
+			for(int r=0;r<10;r++){
+				if(r==10-1){
+					continue;
+				}
+				if(mass[r].price>mass[r+1].price){
+					p=mass[r+1].price;
+					mass[r+1].price=mass[r].price;
+					mass[r].price=p;
+				}
+			}
+		}
+		System.out.println("The sorted masiv is:");
+		for(int u=0;u<10;u++){
+			System.out.println("The first price is:"+mass[u].price);
+		}
+  input.close();
+	}
+
+}

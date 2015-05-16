@@ -1,0 +1,14 @@
+
+public class drink extends Stock {
+	String name;
+	String type;
+	
+	public drink(){
+		this.name="";
+		this.type="";
+	}
+	public drink(String name,String type){
+		this.name=name;
+		this.type=type;
+	}
+}

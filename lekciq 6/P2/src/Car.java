@@ -1,0 +1,17 @@
+
+public class Car {
+
+	public double price;
+	
+	public Car(){
+		this.price=0;
+	}
+	
+	void Car1(double price1){
+		price=price1;
+	}
+	void print(){
+		System.out.println(price);
+	}
+	
+}

@@ -1,0 +1,14 @@
+
+public class meat extends Stock {
+	String name;
+	String type;
+	
+	public meat(){
+		this.name="";
+		this.type="";
+	}
+	public meat(String name,String type){
+		this.name=name;
+		this.type=type;
+	}
+}

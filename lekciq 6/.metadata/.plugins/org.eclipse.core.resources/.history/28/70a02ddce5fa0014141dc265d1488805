@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+
+public class Cats {
+
+	public static void main(String[] args) {
+     Scanner input=new Scanner(System.in,"UTF-8");
+     
+     Cat[] mass=new Cat[10];
+     for(int i=0;i<2;i++){
+    	 System.out.println("Enter name for cat:");
+    	 mass[i].name=input.nextLine();
+    	 System.out.println("Enter name for cat:");
+    	 mass[i].years=input.nextInt();
+     }
+     for(int k=0;k<10;k++){
+    	 System.out.println("The name of the cat is :"+mass[k].name);
+    	 System.out.println("The years of the cat are:"+mass[k].years);
+     }
+
+	}
+
+}

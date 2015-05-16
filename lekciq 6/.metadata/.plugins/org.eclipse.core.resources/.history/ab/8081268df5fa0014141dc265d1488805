@@ -1,0 +1,18 @@
+
+public class Converter {
+
+	
+	double faren;
+	
+	public Converter(){
+		
+		double faren=0;
+	}
+	public Converter(double celsii){
+		double faren=celsii*1.8+32;
+		System.out.println(faren);
+	}
+	void print(){
+		System.out.println("In Farenhait is:"+faren);
+	}
+}

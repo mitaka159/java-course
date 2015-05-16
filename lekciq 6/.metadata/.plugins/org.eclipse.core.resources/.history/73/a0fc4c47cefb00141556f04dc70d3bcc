@@ -1,0 +1,22 @@
+
+public class Doctor extends Employe {
+
+	int nights;
+	int allday;
+	
+	public Doctor(){
+		nights=0;
+		allday=0;
+	}
+	public Doctor(int hours,int salary){
+		this.nights=hours;
+		this.allday=salary;
+	}
+	
+	void SetHours(int hours1){
+		this.hours=hours1;
+	}
+	void SetSulary(int salary2){
+		this.salary=salary2;
+	}
+}

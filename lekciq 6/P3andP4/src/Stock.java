@@ -1,0 +1,15 @@
+
+public class Stock {
+double price;
+boolean avaible;
+
+public Stock(){
+	price=0;
+	avaible=true;
+}
+public Stock(double price,boolean avaible){
+	this.price=price;
+	this.avaible=avaible;
+}
+
+}
