@@ -16,7 +16,4 @@ public class meat extends Stock {
 	void Available(){
 		System.out.println(count);
 	}
-	void SELL(){
-		count=0;
-	}
 }

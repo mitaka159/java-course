@@ -5,8 +5,6 @@ public class test {
 		Store mitko=new Store("Mitko","Plovdiv");
 		mitko.NewProduct(1);
 		mitko.Available(1);
-		mitko.Unavailable(1);
-		mitko.Available(1);
 
 	}
 

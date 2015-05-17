@@ -84,7 +84,7 @@ public class Store extends Stock {
 			 counter.Available();
 		}
 	}
-	void Unavailable(int p){
+	void Sell(int p){
 		if(p==1){ //kolko meso ima v nalichnost
 			 meat counter=new meat();
 			 counter.SELL();

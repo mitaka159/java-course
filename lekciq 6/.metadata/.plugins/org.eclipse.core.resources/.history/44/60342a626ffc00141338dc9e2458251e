@@ -18,6 +18,12 @@ public class vegetables extends Stock {
 		System.out.println(count);
 	}
 	void SELL(){
-		count=0;
+		if(count==0){
+			System.out.println("Non available");
+		}
+		else{
+			count--;
+			System.out.println("SOLD");
+		}
 	}
 }
