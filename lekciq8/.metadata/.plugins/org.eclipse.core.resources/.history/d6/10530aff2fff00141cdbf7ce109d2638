@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+
+public class LAST {
+
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in,"UTF-8");
+		int m;
+		int flag=0;
+		System.out.println("Permutation of numbers:");
+		int n=input.nextInt();
+		int[]arr=new int[n];
+		
+		for(int k=0;k<n;k++){
+			arr[k]=k+1;
+		}
+		int p=0;
+		int f=1;
+		for(int o=n;o>0;o--){
+			f*=o;
+		}
+		m=1;
+		Recursion(arr,p,n,f,m,flag);
+input.close();
+	}
+
+	public static void Recursion(int[] arr,int p,int n,int h,int m,int flag){
+		int j;
+		if(m==h){
+			return;
+		}
+		if(flag==0){
+			for(int f=0;f<n;f++){
+			System.out.println(arr[f]);
+		}
+		}
+		if(flag==1)flag=0;
+		System.out.println();
+		if(p!=(n-1)){j=arr[p];
+		arr[p]=arr[p+1];
+		arr[p+1]=j;
+		p++;
+		}
+		else{
+			p=0;
+			flag=1;
+		}
+		m++;
+		Recursion(arr,p,n,h,m,flag);
+	}
+}

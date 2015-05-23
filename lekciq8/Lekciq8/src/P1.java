@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+
+public class P1 {
+
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in,"UTF-8");
+		System.out.println("Enter number 1");
+		int a=input.nextInt();
+		System.out.println("Enter number 2");
+		int b=input.nextInt();
+		System.out.println("Enter number 3");
+		int c=input.nextInt();
+		a=maxNumber(a,b);
+		a=maxNumber(a,c);
+		System.out.println("The max number is :"+a);
+		
+input.close();
+	}
+	public static int maxNumber(int a,int b){
+		if(a>b){
+			return a;
+		}
+		else{
+			return b;
+		}
+	}
+
+}
