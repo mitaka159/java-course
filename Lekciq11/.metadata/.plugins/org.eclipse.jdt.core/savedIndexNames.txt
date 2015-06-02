@@ -1,0 +1,5 @@
+INDEX VERSION 1.127+E:\java\workspace\Lekciq11\.metadata\.plugins\org.eclipse.jdt.core
+1904366504.index
+32024359.index
+2676765316.index
+3901424146.index

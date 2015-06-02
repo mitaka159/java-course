@@ -1,0 +1,29 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+
+public class P3 {
+
+	public static void main(String[] args) {
+		Queue<String> second=new LinkedList<String>();
+		Scanner input=new Scanner(System.in,"UTF-8");
+		System.out.println("Enter sentance:");
+		String  mitko=input.nextLine();
+		char[] rezult=mitko.toCharArray();
+		if(!Character.isDigit(rezult[0])){
+			System.out.println("Wrong ");
+			System.exit(0);
+		}
+		if(!Character.isDigit(rezult[(rezult.length)-1])){
+			System.out.println("Wrong ");
+			System.exit(0);
+		}
+		System.out.println("haha ");
+		for(int i=0;i<mitko.length();i++){
+			
+		}
+
+	}
+
+}
