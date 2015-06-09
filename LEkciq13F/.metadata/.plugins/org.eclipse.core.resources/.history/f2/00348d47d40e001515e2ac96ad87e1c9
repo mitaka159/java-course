@@ -1,0 +1,19 @@
+package P2;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Graph a=new Graph(15);
+		a.addEdge(1, 3);
+		a.addEdge(1, 8);
+		a.addEdge(1, 9);
+		a.addEdge(1, 11);
+		a.addEdge(11, 5);
+		
+		boolean answer=a.isEdge(1, 11);
+		System.out.println(answer);
+		
+
+	}
+
+}

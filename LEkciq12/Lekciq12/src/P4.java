@@ -1,0 +1,57 @@
+import java.util.ArrayList;
+
+
+public class P4 {
+
+	public static void main(String[] args) {
+		int[] arr={10,5,4,6,7,8,1,3,2,9};
+		ArrayList<Integer> chetni=new ArrayList<Integer>();
+		ArrayList<Integer> nechetni=new ArrayList<Integer>();
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]%2==0){
+				chetni.add(arr[i]);
+			}
+			else{
+				nechetni.add(arr[i]);
+			}
+		}
+		
+		for(int i=0;i<chetni.size();i++){
+			for(int k=0;k<chetni.size()-1;k++){
+				
+				if(chetni.get(k)>chetni.get(k+1)){
+					int p;
+					p=chetni.get(k);
+					chetni.set(k, chetni.get(k+1));
+					chetni.set(k+1, p);
+					
+				}
+			}
+		}
+		
+		for(int i=0;i<nechetni.size();i++){
+			for(int k=0;k<nechetni.size()-1;k++){
+				
+				if(nechetni.get(k)<nechetni.get(k+1)){
+					int p;
+					p=nechetni.get(k);
+					nechetni.set(k, nechetni.get(k+1));
+					nechetni.set(k+1, p);
+					
+				}
+			}
+		}
+		System.out.println("Nechetni sa:");
+		for(int i=0;i<nechetni.size();i++){
+			System.out.print(nechetni.get(i)+" ");
+		}
+		System.out.println();
+		System.out.println("Chetni sa:");
+		for(int i=0;i<chetni.size();i++){
+			System.out.print(chetni.get(i)+" ");
+		}
+		
+
+	}
+
+}
