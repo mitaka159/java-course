@@ -1,0 +1,25 @@
+import java.util.Random;
+
+
+public class Nishka1 extends Thread{
+
+	public void run(){
+		Random ran=new Random();
+		int k=ran.nextInt(10);
+		k=k*1000;
+		
+		System.out.println("The thread started");
+		try {
+			char c=(char)(ran.nextInt(26)+'a');
+			System.out.println(c);
+			String r=String.format("%c %d",c,k);
+			this.setName(r);
+			Thread.sleep(k);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("The thread is complited");
+	}
+	
+}

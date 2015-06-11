@@ -1,0 +1,6 @@
+package mitko;
+
+public class Nishka extends Thread{
+
+	
+}

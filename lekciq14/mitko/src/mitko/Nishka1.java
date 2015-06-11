@@ -1,0 +1,11 @@
+package mitko;
+
+public class Nishka1 extends Thread{
+
+	public void run(){
+	for(int i=0;i<500000;i++){
+	
+		System.out.println(i);
+	}
+	}
+}
