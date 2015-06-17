@@ -1,0 +1,178 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+
+public class Test {
+  static ArrayList<Item> items=new ArrayList<Item>();
+  static Scanner input=new Scanner(System.in,"UTF-8");
+  
+	public static void main(String[] args) {
+//		ArrayList<Item> items =new ArrayList<Item>();
+//		Calendar calendar=Calendar.getInstance();
+//		Date current=calendar.getTime();
+//		calendar.add(Calendar.DATE, -7);
+//		Date ago=calendar.getTime();
+//		Date temp;
+//		int sum=0;
+//		for(int i=0;i<items.size();i++){
+//			temp=items.get(i).getDate();
+//			double price=items.get(i).getPrice();
+//			if(temp.getTime()>=ago.getTime() && temp.getTime()<=current.getTime()){
+//				sum+=price;
+//			}
+//		}
+//	}
+		int choise=0;
+		
+		while(true){
+		System.out.println("Enter choise ");
+		System.out.println("1:ADD ");
+		System.out.println("2:One week");
+		System.out.println("3:One month ");
+		System.out.println("4:One year ");
+		System.out.println("5:Import ");
+		System.out.println("6:Export ");
+		
+		
+		choise=input.nextInt();
+		
+		if(choise==1){
+			
+			add();
+		}
+	if(choise==2){
+			
+			month();
+		}
+		if(choise==3){
+			day();
+		}
+		if(choise==4){
+			year();
+		}
+		
+		}
+		if(choise==6){
+			imports();
+		}
+			
+			
+		}
+		
+
+
+}
+	public static void add(){
+		int year;
+		int day;
+		int month;
+		double price;
+		Item i=new Item();
+		
+		String name;
+		System.out.println("Enter year");
+		year=input.nextInt();
+		input.nextLine();
+		System.out.println("Enter day");
+		day=input.nextInt();
+		input.nextLine();
+		System.out.println("Enter month");
+		month=input.nextInt();
+		input.nextLine();
+		System.out.println("Enter price");
+		price=input.nextFloat();
+		input.nextLine();
+		System.out.println("Enter name");
+		name=input.nextLine();
+	    i.setCalendar(year, month, day);
+	    i.setName(name);
+	    i.setPrice(price);
+	    items.add(i);
+	    
+	}
+	public static void month(){
+		Calendar calendar=Calendar.getInstance();
+		Date current=calendar.getTime();
+		calendar.add(Calendar.DATE, -7);
+		Date ago=calendar.getTime();
+		Date temp;
+		
+		double sum=0;
+		for(int i=0;i<items.size();i++){
+			temp=items.get(i).getDate();
+			System.out.println(temp.getTime());
+			System.out.println(ago.getTime());
+			System.out.println(current.getTime());
+			double price=items.get(i).getPrice();
+			if(temp.getTime()>=ago.getTime() && temp.getTime()<=current.getTime()){
+				sum+=price;
+			}
+		}
+		System.out.println("The sum is: "+sum);
+	
+	}
+	public static void day(){
+		Calendar calendar=Calendar.getInstance();
+		Date current=calendar.getTime();
+		calendar.add(Calendar.MONTH, -1);
+		Date ago=calendar.getTime();
+		Date temp;
+		
+		double sum=0;
+		for(int i=0;i<items.size();i++){
+			temp=items.get(i).getDate();
+			System.out.println(temp.getTime());
+			System.out.println(ago.getTime());
+			System.out.println(current.getTime());
+			double price=items.get(i).getPrice();
+			if(temp.getTime()>=ago.getTime() && temp.getTime()<=current.getTime()){
+				sum+=price;
+			}
+		}
+		System.out.println("The sum is: "+sum);
+	}
+	public static void year(){
+		Calendar calendar=Calendar.getInstance();
+		Date current=calendar.getTime();
+		calendar.add(Calendar.YEAR, -1);
+		Date ago=calendar.getTime();
+		Date temp;
+		
+		double sum=0;
+		for(int i=0;i<items.size();i++){
+			temp=items.get(i).getDate();
+			System.out.println(temp.getTime());
+			System.out.println(ago.getTime());
+			System.out.println(current.getTime());
+			double price=items.get(i).getPrice();
+			if(temp.getTime()>=ago.getTime() && temp.getTime()<=current.getTime()){
+				sum+=price;
+			}
+		}
+		System.out.println("The sum is: "+sum);
+	}
+	public static void imports(){
+		System.out.println("Enter name if FILE");
+		String name=input.nextLine();
+		FileWriter path=new FileWriter(name);
+		BufferedWriter writer=new BufferedWriter(path);
+		for(int i=0;i<items.size();i++){
+			
+			writer.write(items.get(i).getYear());
+			writer.write(" ");
+			writer.write(items.get(i).getMonth());
+			writer.write(" ");
+			writer.write(items.get(i).getDay());
+			writer.write(" ");
+			writer.write(Double.toString(items.get(i).getDay()));
+			writer.write(" ");
+			writer.write(items.get(i).getName());
+			writer.newLine();
+	}
+		writer.close();
+}
+	}

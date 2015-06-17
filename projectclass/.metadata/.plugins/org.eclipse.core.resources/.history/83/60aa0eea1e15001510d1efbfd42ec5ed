@@ -1,0 +1,97 @@
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+
+public class Test {
+  static ArrayList<Item> items=new ArrayList<Item>();
+	public static void main(String[] args) {
+//		ArrayList<Item> items =new ArrayList<Item>();
+//		Calendar calendar=Calendar.getInstance();
+//		Date current=calendar.getTime();
+//		calendar.add(Calendar.DATE, -7);
+//		Date ago=calendar.getTime();
+//		Date temp;
+//		int sum=0;
+//		for(int i=0;i<items.size();i++){
+//			temp=items.get(i).getDate();
+//			double price=items.get(i).getPrice();
+//			if(temp.getTime()>=ago.getTime() && temp.getTime()<=current.getTime()){
+//				sum+=price;
+//			}
+//		}
+//	}
+		int choise=0;
+		Scanner input=new Scanner(System.in,"UTF-8");
+		while(true){
+		System.out.println("Enter choise ");
+		System.out.println("1:ADD ");
+		System.out.println("2:One week");
+		System.out.println("3:One month ");
+		System.out.println("4:One year ");
+		
+		choise=input.nextInt();
+		if(choise==1){
+			add();
+		}
+//		if(choise==2){
+//			week();
+//		}
+		if(choise==3){
+			month();
+		}
+//		if(choise==4){
+//			year();
+//		}
+		}	
+		
+
+
+}
+	public static void add(){
+		int year;
+		int day;
+		int month;
+		double price;
+		Item i=new Item();
+		Scanner input=new Scanner(System.in,"UTF-8");
+		String name;
+		System.out.println("Enter year");
+		year=input.nextInt();
+		input.nextLine();
+		System.out.println("Enter day");
+		day=input.nextInt();
+		input.nextLine();
+		System.out.println("Enter month");
+		month=input.nextInt();
+		input.nextLine();
+		System.out.println("Enter price");
+		price=input.nextFloat();
+		input.nextLine();
+		System.out.println("Enter name");
+		name=input.nextLine();
+	    i.setCalendar(year, month, day);
+	    i.setName(name);
+	    i.setPrice(price);
+	    items.add(i);
+	    input.close();
+	}
+	public static void month(){
+		Calendar calendar=Calendar.getInstance();
+		Date current=calendar.getTime();
+		calendar.add(Calendar.DATE, -7);
+		Date ago=calendar.getTime();
+		Date temp;
+		int sum=0;
+		for(int i=0;i<items.size();i++){
+			temp=items.get(i).getDate();
+			double price=items.get(i).getPrice();
+			if(temp.getTime()>=ago.getTime() && temp.getTime()<=current.getTime()){
+				sum+=price;
+			}
+		}
+		System.out.println("The sum is: "+sum);
+	
+	}
+}
